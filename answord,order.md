@@ -1,1 +1,1 @@
-1
+padding().background()는 텍스트에 여백을 먼저 준 뒤 전체 영역에 배경색을 칠하므로 background(padding(Text)) 형태가 되어 넓은 배경이 나타납니다. .background().padding()은 텍스트 크기만큼 배경을 칠한 뒤 바깥에 여백을 추가하므로 padding(background(Text)) 형태가 되어 글자 배경 바깥으로 투명한 여백이 생깁니다.
