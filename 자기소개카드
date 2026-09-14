@@ -2,45 +2,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Spacer()
-            
-            ZStack(alignment: .topTrailing) {
-                VStack(alignment: .leading, spacing: 10) {
-                    HStack {
-                        Image(systemName: "person.crop.circle.fill")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(.blue)
-                        
-                        VStack(alignment: .leading) {
-                            Text("한민성")
-                                .font(.title2)
-                                .fontWeight(.bold)
-                            
-                            Text("게임공학전공 전공")
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                        }
-                    }
+        ZStack(alignment: .topTrailing) {
+            VStack {
+                HStack {
+                    Image(systemName: "person.fill")
+                        .font(.largeTitle)
                     
-                    Text("게임공학 한민성 입니다.")
-                        .font(.body)
+                    VStack(alignment: .leading) {
+                        Text("한민성")
+                        Text("게임공학전공")
+                    }
                 }
-                .padding()
-                .background(Color.blue.opacity(0.1))
-                .cornerRadius(15)
                 
-                Image(systemName: "checkmark.seal.fill")
-                    .foregroundColor(.red)
-                    .background(Color.white)
-                    .clipShape(Circle())
-                    .offset(x: 10, y: -10)
+                Text("게임공학 한민성 입니다.")
             }
             .padding()
-            
-            Spacer()
+            .background(Color.cyan)
+            .cornerRadius(10)
+            Image(systemName: "star.fill")
+                .foregroundColor(.red)
+                .offset(x: 10, y: -10)
         }
+        .padding()
     }
 }
 
