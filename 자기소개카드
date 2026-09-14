@@ -1,0 +1,49 @@
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Spacer()
+            
+            ZStack(alignment: .topTrailing) {
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack {
+                        Image(systemName: "person.crop.circle.fill")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                            .foregroundColor(.blue)
+                        
+                        VStack(alignment: .leading) {
+                            Text("한민성")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                            
+                            Text("게임공학전공 전공")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                        }
+                    }
+                    
+                    Text("게임공학 한민성 입니다.")
+                        .font(.body)
+                }
+                .padding()
+                .background(Color.blue.opacity(0.1))
+                .cornerRadius(15)
+                
+                Image(systemName: "checkmark.seal.fill")
+                    .foregroundColor(.red)
+                    .background(Color.white)
+                    .clipShape(Circle())
+                    .offset(x: 10, y: -10)
+            }
+            .padding()
+            
+            Spacer()
+        }
+    }
+}
+
+#Preview {
+    ContentView()
+}
